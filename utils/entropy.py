@@ -3,15 +3,6 @@ from typing import Dict
 from databricks import koalas as ks
 from pyspark.sql.functions import log
 
-__author__ = ['Li Tang']
-__copyright__ = 'Li Tang'
-__credits__ = ['Li Tang']
-__license__ = 'MIT'
-__version__ = '0.2.0'
-__maintainer__ = ['Li Tang']
-__email__ = 'litang1025@gmail.com'
-__status__ = 'Production'
-
 
 def entropy(data, base: float = 2.0, dropna: bool = True) -> Dict[str, float]:
     '''

@@ -11,15 +11,6 @@ from tensorflow.keras.metrics import Mean
 
 from ._get_keras_obj import get_init, get_loss, get_optimizer
 
-__author__ = ['Li Tang']
-__copyright__ = 'Li Tang'
-__credits__ = ['Li Tang']
-__license__ = 'MIT'
-__version__ = '0.2.0'
-__maintainer__ = ['Li Tang']
-__email__ = 'litang1025@gmail.com'
-__status__ = 'Production'
-
 
 class SuiPNNError(Exception):
     pass
@@ -91,10 +82,11 @@ class PNN(Model):
             setattr(self, 'dropout_' + str(layer_index), Dropout(self.dropout_params[layer_index]))
 
     def call(self, feature_value, embedding_index, training=False):
-        """Function to obtain the series vertex data by concurrent walking in the graph.
+        """Function to call
 
         Args:
-        walk_depth:
+        feature_value:
+        embedding_index:
 
         Returns:
             a list
